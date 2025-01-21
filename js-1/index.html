@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test JavaScript</title>
+</head>
+<body>
+
+<p id="demo">Міняє колір тексту та розмір</p>
+<button type="button"
+        onclick="document.getElementById('demo').style.color = 'red';">
+    натисни
+</button>
+<button type="button"
+        onclick="document.getElementById('demo').style.fontSize = '35px';">
+    натисни
+</button>
+
+
+<p id="1">міняє текст</p>
+<button type="button" onclick="document.getElementById('1').innerHTML='новий текст'">натисни</button>
+
+
+<p id="2"></p>
+<script>
+    document.getElementById('2').innerHTML = 'Текст'
+</script>
+
+
+<p id="11">Текст змінється</p>
+<button type="button" onclick="ChangeText()">Змінити текст</button>
+<button type="button" onclick="ChangeColor()">Змінити колір</button>
+<button type="button" onclick="ChangeStyle()">Змінити стиль</button>
+<script>
+    function ChangeText() {
+        document.getElementById('11').innerHTML = 'новий текст'
+    }
+
+    function ChangeColor() {
+        document.getElementById("11").style.color = "green";
+    }
+
+    function ChangeStyle() {
+        document.getElementById("11").style.fontSize = "20px";
+        document.getElementById("11").style.fontWeight = "bold";
+    }
+</script>
+
+
+<script>
+    function myFunction() {
+        document.getElementById("3").innerHTML = "параграф змінено";
+    }
+</script>
+<p id="3">Параграф</p>
+<button type="button" onclick="myFunction()">натисни</button>
+
+
+<button type="button" onclick="document.write(1+1)">Видалить весь вміст сторінки</button>
+
+
+<script>
+    window.alert(6 / 2)
+</script>
+
+
+<script>
+    console.log(2 + 4)
+</script>
+
+
+<button onclick="window.print()">натисни))</button>
+
+
+<p id="4"></p>
+<script>
+    let a, b, c;
+    a = 15;
+    b = 23;
+    c = a + b;
+    document.getElementById('4').innerHTML = c;
+</script>
+
+
+<button type="button" onclick="MyFunction1()">натисни</button>
+<p id="5"></p>
+<p id="6"></p>
+<script>
+    function MyFunction1() {
+        document.getElementById('5').innerHTML = 'Привіт';
+        document.getElementById('6').innerHTML = 'Як справи?';
+    }
+</script>
+
+
+<p id="7"></p>
+<script>
+    let number = 16;
+    document.getElementById('7').innerHTML = 'Квадратний корінь з ' + number + ' = ' + Math.sqrt(number);
+</script>
+
+
+<p id="8"></p>
+<script>
+    let x = 10;
+    document.getElementById('8').innerHTML = Math.pow(x, 2);
+</script>
+
+
+<p id="12"></p>
+<script>
+    let num1 = 20;
+    let num2 = 5;
+    let result = num1 * num2;
+    document.getElementById('12').innerHTML = '20 * 5 = ' + result;
+</script>
+
+
+<p id="13"></p>
+<button type="button" onclick="RandomNumber()">Показати випадкове число</button>
+<script>
+    function RandomNumber() {
+        let randomNumber = Math.floor(Math.random() * 100);
+        document.getElementById('13').innerHTML = 'Випадкове число ' + randomNumber;
+    }
+</script>
+
+
+<p id="9"></p>
+<script>
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue"
+    };
+
+    document.getElementById("9").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+</script>
+
+
+<p id="10"></p>
+<script>
+    const dog = {
+        name: "name: Bella, " + '<br>',
+        breed: "breed: French Bulldog, " + '<br>',
+        age: 'age: ' + 1 + ' year old,' + '<br>',
+        color: "color: orange. " + '<br>',
+        getDog: function () {
+            return dog.name + dog.breed + dog.age + dog.color;
+        }
+    }
+    document.getElementById("10").innerHTML = dog.getDog();
+</script>
+
+<script>
+    /*
+    document.getElementByID() шукає тег на сторінці за його id
+    innerHTML дозволяє змінювати або отримувати вміст елемента
+    Math.random() генерує випадкове число від 0 до 1
+    Math.floor() округляє число
+    Math.sqrt() обчислює квадратний корінь з числа
+    Math.pow() підносить число до степеня
+    console.log виводить повідомлення в консоль браузера (корисно для пошуку помилок)
+    window.alert() виводить спливаюче повідомлення з текстом на сторінці
+    window.print() викликає вікно для друку сторінки
+    document.write() записує текст але видаляє весь вміст сторінки
+    */
+</script>
+
+</body>
+</html>
