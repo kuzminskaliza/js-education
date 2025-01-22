@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+    const cars = {
+        type: 'Fiat',
+        model: '500',
+        color: 'red'
+    };
+    cars.color = 'blue';
+    document.getElementById('demo').innerHTML = 'Type of car ' + cars.type + ' Color is ' + cars.color;
+</script>
+
+<p id="demo1"></p>
+<script>
+    const person = {};
+    person.firstName = 'John ';
+    person.lastName = 'Doe';
+    person.age = 50;
+    person.eyeColor = 'blue';
+    delete person.age;
+    document.getElementById('demo1').innerHTML = person.firstName + 'is ' + person['age'] + ' years old';
+</script>
+
+<p id="demo2"></p>
+<script>
+    const fruits = {
+        apple: 'red',
+        banana: 'yellow',
+        orange: 'orange',
+        getAppleColor: function () {
+            return this.apple;
+        }
+    }
+    document.getElementById('demo2').innerHTML = fruits.getAppleColor();
+</script>
+
+<p id="demo3"></p>
+<script>
+    const personJohnDoe = {
+        firstName: 'John',
+        lastName: 'Doe',
+        id: 5566,
+    };
+    personJohnDoe.name = function () {
+        return (this.firstName + ' ' + this.lastName).toUpperCase();
+    };
+    document.getElementById('demo3').innerHTML = personJohnDoe.name();
+</script>
+<p id="demo4"></p>
+<script>
+    document.getElementById('demo4').innerHTML = person;
+</script>
+
+<p id="demo5"></p>
+<script>
+    const vegetables = {
+        carrot: 'green',
+        cucumber: 'yellow',
+        potato: 'red',
+    };
+    const myArray = Object.values(vegetables);
+    document.getElementById('demo5').innerHTML = myArray;
+    let myString = JSON.stringify(vegetables);
+    document.getElementById('demo5').innerHTML = myString;
+</script>
+
+<p id="demo6"></p>
+<p id="demo7"></p>
+<script>
+    function Person(firstName, lastName, age, eyeColor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.eyeColor = eyeColor;
+        this.fullName = function () {
+            return this.firstName + ' ' + this.lastName;
+        }
+    };
+    const person1 = new Person('John', 'Doe', 50, 'blue');
+    const person2 = new Person('Peter', 'Rally', 30, 'green');
+    document.getElementById('demo6').innerHTML = 'Person 1: ' + person1.firstName + '. Person 2: ' + person2.firstName;
+    document.getElementById('demo7').innerHTML = person1.fullName();
+</script>
+
+<button onclick="alert('Клік!')">Натисни мене</button>
+<button type="button" onclick="document.getElementById('demo8').innerHTML=Date()">Time?</button>
+<p id="demo8"></p>
+
+<p id="demo9"></p>
+<script>
+    let text = 'Hello world!';
+    let length = text.length;
+    document.getElementById('demo9').innerHTML = length;
+</script>
+
+<p id="demo10"></p>
+<script>
+    let text1 = 'Hello world!';
+    let char = text1.charAt(0);
+    document.getElementById('demo10').innerHTML = char;
+</script>
+
+<p id="demo11"></p>
+<script>
+    let text2 = 'Hello world!';
+    let charAt = text2.charCodeAt(0);
+    document.getElementById('demo11').innerHTML = charAt;
+</script>
+
+<p id="demo12"></p>
+<script>
+    let fruit = 'Apple, Banana, Kiwi';
+    let part = fruit.slice(0, 5);
+    document.getElementById('demo12').innerHTML = part;
+</script>
+
+<p id="demo13"></p>
+<script>
+    let str = 'Apple, Banana, Kiwi';
+    let part2 = str.substring(7, 13);
+    document.getElementById('demo13').innerHTML = part2;
+</script>
+
+<p id="demo14"></p>
+<script>
+    let str1 = 'Apple, Banana, Kiwi';
+    let part3 = str1.toUpperCase();
+    document.getElementById('demo14').innerHTML = part3;
+</script>
+
+<p id="demo15"></p>
+<script>
+    let str2 = 'Apple, Banana, Kiwi';
+    let part4 = str2.toLowerCase();
+    document.getElementById('demo15').innerHTML = part4;
+</script>
+
+<p id="demo16"></p>
+<script>
+    let txt1 = 'hello';
+    let txt2 = 'world';
+    let txt3 = txt1.concat('', txt2);
+    document.getElementById('demo16').innerHTML = txt3;
+</script>
+
+<p id="demo17"></p>
+<script>
+    let txt4 = '    hello world     ';
+    let txt5 = txt4.trim();
+    document.getElementById('demo17').innerHTML = txt5;
+</script>
+
+<p id="demo18"></p>
+<script>
+    let txt = '    Hello World!     ';
+    let trimmedStart = txt.trimStart();
+    document.getElementById('demo18').innerHTML = trimmedStart;
+</script>
+
+<p id="demo23"></p>
+<script>
+    let txt6 = 'Hello world!';
+    let replaced = txt6.replace('world', 'JavaScript');
+    document.getElementById('demo23').innerHTML = replaced;
+</script>
+
+<p id="demo24"></p>
+<script>
+    let txt7 = 'Apples are apples.';
+    let replacedAll = txt7.replaceAll('apples', 'oranges');
+    document.getElementById('demo24').innerHTML = replacedAll;
+</script>
+
+<p id="demo25"></p>
+<script>
+    let txt8 = 'Apple, Banana, Kiwi';
+    let splitArray = txt8.split(', ');
+    document.getElementById('demo25').innerHTML = splitArray;
+</script>
+</body>
+</html>
