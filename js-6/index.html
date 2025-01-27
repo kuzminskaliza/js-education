@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: chartreuse;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            background-color: hotpink;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
+<p id="demo15"></p>
+
+<form name="myForm" onsubmit="return validateForm()" action="index.html" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+</form>
+
+<input id="numb">
+<button type="button" onclick="myFunction1()">Submit</button>
+<p id="demo16"></p>
+<p id="demo17">Hello World</p>
+
+<p><button onclick="myMove()">Click me</button> </p>
+
+<div id="container">
+    <div id="animate"></div>
+</div>
+<p></p>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="width: 120px; height: 20px; padding:40px; background-color: lightblue;">Mouse over me</div>
+<p></p>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" onmouseout="mOut(this)" style="width: 120px; height: 20px; padding:40px; background-color: deeppink;">Mouse down me</div>
+
+<script src="script.js"></script>
+</body>
+</html>
