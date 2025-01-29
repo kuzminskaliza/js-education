@@ -1,0 +1,82 @@
+.text {
+    display: none;
+}
+
+.container {
+    display: inline-block;
+    width: 100px;
+}
+
+.containerForImg {
+    display: inline-block;
+    width: 600px;
+    text-align: center;
+}
+
+button {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff758c;
+    box-shadow: 0px 0px 6px rgba(255, 117, 140, 0.5);
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #333;
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-left: 4px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+p:hover {
+    background: #e9ecef;
+}
+
+h3 {
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
