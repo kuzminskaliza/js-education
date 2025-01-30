@@ -1,0 +1,84 @@
+.containerForImages {
+    display: flex;
+}
+
+div {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#output, #outputTime {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.containerForImages {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#slider {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+input[type="number"], input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin: 0 10px 0 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+li {
+    margin: 5px 0;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+label {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    display: inline-block;
+}
