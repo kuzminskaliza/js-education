@@ -1,18 +1,19 @@
+'use strict';
 const div = document.getElementById('div');
 const button = document.getElementById('showHide');
 
 let isButtonClicked = true;
 
-function showHide() {
+button.addEventListener('click',  ()=> {
     if (!isButtonClicked) {
         div.style.display = 'inline';
+        button.innerHTML = 'Hide';
     } else {
         div.style.display = 'none';
+        button.innerHTML = 'Show';
     }
     isButtonClicked = !isButtonClicked;
-}
-
-button.addEventListener('click', showHide);
+});
 
 document.getElementById('show').addEventListener('click', function () {
     document.querySelector('.text').style.display = 'inline'
@@ -29,9 +30,8 @@ document.getElementById('hide').addEventListener('click', function () {
 
 let i = 0
 const buttonClick = document.getElementById('onClick');
-buttonClick.addEventListener('click', function click() {
-    i++;
-    document.getElementById('showButtonClick').innerHTML = i;
+buttonClick.addEventListener('click', () => {
+    document.getElementById('showButtonClick').innerHTML = i++;
 })
 
 
@@ -65,17 +65,17 @@ document.getElementById('add').addEventListener('click', function () {
     document.getElementById('list').appendChild(li);
 });
 
-document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('click', function () {
-        document.querySelectorAll('img').forEach(allImg => {
-            if (allImg === this) {
-                allImg.style.width = '125px';
-                allImg.style.height = '125px';
+document.querySelector('.containerForImg').addEventListener('click', (event) => {
+    if (event.target.tagName === 'IMG') {
+        document.querySelectorAll('.containerForImg img').forEach(img => {
+            if (img === event.target) {
+                img.style.width = '125px';
+                img.style.height = '125px';
             } else {
-                allImg.style.width = '75px';
-                allImg.style.height = '75px';
+                img.style.width = '75px';
+                img.style.height = '75px';
             }
         });
-    });
+    }
 });
 
