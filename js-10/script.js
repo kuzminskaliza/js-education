@@ -77,8 +77,6 @@ function randomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
-randomColor();
-
 let button = document.getElementById('changeColor');
 document.body.style.backgroundColor = randomColor();
 button.addEventListener('click', function () {
