@@ -1,0 +1,42 @@
+body {
+  background: plum;
+}
+
+#first {
+  background-color: cornflowerblue;
+  width: 100px;
+  padding: 10px;
+}
+
+#second {
+  background-color: chartreuse;
+  padding: 10px;
+}
+
+#third {
+  background-color: coral;
+  padding: 0 10px 0 10px;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image {
+  display: none;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
