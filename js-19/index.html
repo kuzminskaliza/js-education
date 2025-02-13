@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="div1" style="height:100px; width:300px; border:1px solid black; background-color: lightsteelblue;">
+    <p>Hello World</p>
+    <p>This paragraph</p>
+</div>
+<br>
+<button id="btn">Remove block</button>
+<br>
+<br>
+<div id="div2" style="height:100px; width:300px; border:1px solid black; background-color: lightsteelblue;">
+    <p>Hello World</p>
+    <p>This paragraph</p>
+</div>
+<br>
+<button id="btn2">Remove block</button>
+<br>
+<br>
+
+<h1 id="h1">Heading</h1>
+<h2 id="h2">Heading</h2>
+<p id="p">Paragraph</p>
+<p id="p2">Paragraph</p>
+
+<div id="div3">
+    This is some important text!
+</div>
+<br>
+<button id="btn3">Add classes to element</button>
+<button id="btn4">Remove classes to element</button>
+<button id="btn5">Toggle classes</button>
+<br>
+<br>
+
+<h3 style="background-color: red">Paragraph</h3>
+<h3 style="background-color: yellow">Paragraph</h3>
+<h3 style="background-color: green">Paragraph</h3>
+<button id="btn6">Show color rgb</button>
+<br>
+<br>
+
+<div id="box"></div>
+<button id="btn7">Click</button>
+
+<div class="ancestors">
+    <div style="width:500px;">div (great-grandparent)
+        <ul>ul (grandparent)
+            <li>li (direct parent)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+
+    <div style="width:500px;">div (grandparent)
+        <p>p (direct parent)
+            <span>span</span>
+        </p>
+    </div>
+</div>
+
+<div class="descendants" style="width:500px;">div (current element)
+    <p>p (child)
+        <span>span (grandchild)</span>
+    </p>
+    <p>p (child)
+        <span>span (grandchild)</span>
+    </p>
+</div>
+
+<button id="btn8">Send an HTTP GET request to a page and get the result back</button>
+
+
+<p id="p3"></p>
+<button id="btn9">Click</button>
+
+
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<table>
+    <thead>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody id="myTable">
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@mail.com</td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@greatstuff.com</td>
+    </tr>
+    <tr>
+        <td>Anja</td>
+        <td>Ravendale</td>
+        <td>a_r@test.com</td>
+    </tr>
+    </tbody>
+</table>
+
+<p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+
+<button id="btn10">Click</button>
+</body>
+</html>
