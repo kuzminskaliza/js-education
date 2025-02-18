@@ -1,0 +1,58 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.star {
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+
+.heart {
+    font-size: 50px;
+    color: black;
+    border: none;
+    background-color: white;
+    transition: color 0.3s ease-in-out;
+
+}
+.heart-animation {
+    color: red;
+    animation: heartBeat 0.5s infinite;
+}
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#specialButton {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+
+.container2 {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+#cat {
+    position: absolute;
+    pointer-events: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
