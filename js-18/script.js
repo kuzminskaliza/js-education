@@ -1,3 +1,5 @@
+// jshint esversion: 6
+
 $(document).ready(function(){
     'use strict';
     let animationDocument = {
