@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container pt-5" id="app">
+    <div class="card">
+        <h1>{{ title }}: {{ counter }}</h1>
+    </div>
+    <div>
+        <button class="btn primary" v-on:click="counter++">+</button>
+        <button class="btn danger" v-on:click="counter = counter -1">-</button>
+    </div>
+
+    <div class="card">
+        <h1  :style="{
+            color: inputValue.length < 5 ? 'darkred' : 'darkblue',
+            fontSize: inputValue.length < 6 ? '2rem' : '1.3rem'
+        }">{{title2}}</h1>
+        <div class="form-control">
+            <input type="text"
+                   v-bind:placeholder="placeholder"
+                   v-model="inputValue"
+                   v-on:input="inputChangeHandler"
+                   v-on:keypress.enter="addNewNote"
+            />
+        </div>
+        <h2>inputValue: {{inputValue}}</h2>
+        <button class="btn" v-on:click="addNewNote">Add</button>
+        <hr/>
+
+        <ul class="list" v-if="notes.length !== 0">
+            <li class="list-item" v-for="(myNote, idx) in notes">
+               ({{ idx + 1}}) {{toUpperCase(myNote)}}
+                <button class="btn danger" v-on:click="removeNote(idx)">Видалити</button>
+            </li>
+            <hr/>
+            <li>
+               <strong>Всі нотатки: {{ notes.length }}</strong> | Подвоєнне: {{ doubleCountComputed }}
+            </li>
+        </ul>
+        <div v-else>Нотаток поки немає.Додайте першу</div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.global.js"></script>
+<script src="scriptFromVideo.js"></script>
+</body>
+</html>

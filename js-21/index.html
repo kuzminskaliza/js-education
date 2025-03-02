@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #app {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        form {
+            border: dashed black 1px;
+            width: 200px;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="app">
+    <p v-bind:title="tooltip">Наведи на мене (v-bind)</p>
+    <p v-show="isVisible">Цей текст показується за допомогою v-show</p>
+    <p v-if="isVisible">Цей текст показується за допомогою  v-if</p>
+    <button @click="toggleVisibility">Перемкнути текст</button>
+
+    <ul>
+        <li v-for="(item, index) in items" :key="index">{{ index + 1 }}. {{ item }}</li>
+    </ul>
+    <button v-on:click="showAlert">Натисни на мене(v-on:click)</button>
+
+    <div @mousemove="updateCoords" style="border: 1px solid black; padding: 20px; margin-top: 10px;">
+        Наведи мишку(x : {{ x }}, y : {{ y }})
+    </div>
+
+    <input type="text" v-model="message" placeholder="">
+    <p>Ти ввів {{ message }}</p>
+
+    <form @submit.prevent="submitForm">
+        <button type="submit">Відправити (prevent)</button>
+    </form>
+
+
+    <form v-on:submit.prevent="addItem">
+        <p>
+            What do you need?
+            <input type="text" required placeholder="item name.." v-model="itemName">
+        </p>
+        <p>
+            How many?
+            <input type="number" placeholder="number of items.." v-model="itemNumber">
+        </p>
+        <button type="submit">Add item</button>
+    </form>
+
+    <div>
+        <p>Shopping list:</p>
+        <ul>
+            <li v-for="item in shoppingList">{{ item.name }}, {{ item.number}}</li>
+        </ul>
+    </div>
+
+
+    <ul>
+        <li v-for="(value, key) in user" :key="key">
+            {{ key }}: {{ value }}
+        </li>
+    </ul>
+
+
+</div>
+
+
+
+<script src="https://unpkg.com/vue/dist/vue.global.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

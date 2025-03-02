@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 600px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f0f0f5;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+h2 {
+    color: #777;
+    font-size: 18px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #4caf50;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: #45a049;
+}
+
+.btn.danger {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn.danger:hover {
+    background: #c0392b;
+}
+
+.form-control input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-control input:focus {
+    border: 1px solid #4caf50;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background: #e0e0e0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.list-item:hover {
+    background: #d6d6d6;
+}
