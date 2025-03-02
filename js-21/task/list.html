@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div>
+        <h3>To Do List</h3>
+        <div>
+            <input type="text" v-model="getInput"/>
+        </div>
+        <button v-on:click="addNewTask()">Add</button>
+    </div>
+    <div>
+        <ul>
+            <li v-for="(task, index) in filteredTasks" :key="index">
+                <input type="checkbox" v-model="task.done" @change="saveToLocalStorage">
+                <span :style="{ textDecoration: task.done ? 'line-through' : 'none' }">{{ task.text }}</span>
+                <button @click="deleteTask(index)">❌</button>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button @click="setFilter('all')">All</button>
+        <button @click="setFilter('done')">Done</button>
+        <button @click="setFilter('not_done')">Not done</button>
+    </div>
+    <button @click="clearCompletedTasks">Clear all completed tasks</button>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.global.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
