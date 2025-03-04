@@ -1,78 +1,62 @@
 <template>
-  <div class="container pt-1">
+  <div class="container">
     <div class="card">
-      <h2>Aктуальні новини {{ now }}</h2>
-      <span>Відкрито: {{ openRate }} </span>
-      <button class="btn" @click="sortNews">Сортувати за алфавітом</button>
-      <div>
-        <input v-model="newTitle" placeholder="Назва новини" class="input"/>
-        <textarea v-model="newContent" placeholder="Текст Новини" class="textarea"></textarea>
-        <button class="btn" @click="addNews">Додати новину</button>
+      <h1>Генератор порад</h1>
+
+      <div class="form-control">
+        <label for="category">Виберіть категорію:</label>
+        <select v-model="selectedCategory">
+          <option v-for="category in categories" :key="category" :value="category">
+            {{ category }}
+          </option>
+        </select>
       </div>
+
+      <button class="btn" @click="generateAdvice">Отримати пораду</button>
     </div>
 
-    <app-news
-      v-for="item in news"
-      :key="item.id"
-      :title="item.title"
-      :id="item.id"
-      :is-open="item.isOpen"
-      :content="item.content"
-      @open-news="openNews(item.id)">
-    </app-news>
+    <div v-if="showAlert" class="alert">
+      <p class="alert-title">Порада:</p>
+      <p>{{ advice }}</p>
+    </div>
   </div>
 </template>
 
-<script>
-import AppNews from "./AppNews";
+<script setup>
+import { ref, computed, watch } from 'vue';
 
-export default {
-  data() {
-    return {
-      now: new Date().toLocaleDateString(),
-      news: [
-        {
-          title: 'Новина 1',
-          id: 1,
-          isOpen: false,
-          content: 'Текст першої новини'
-        },
-        {
-          title: 'Новина 2',
-          id: 2,
-          isOpen: false,
-          content: 'Текст другої новини'
-        }
-      ],
-      openRate: 0,
-      newTitle: '',
-      newContent: ''
-    }
-  },
-  components: {
-    'app-news': AppNews
-  },
-  methods: {
-    openNews(id) {
-      this.openRate++
-      console.log(`Новина з id ${id} була відкрита`)
-    },
-    sortNews() {
-      this.news.sort((a, b) => a.title.localeCompare(b.title))
-    },
-    addNews() {
-      if (this.newTitle.trim() && this.newContent.trim()) {
-        this.news.push({
-          title: this.newTitle,
-          content: this.newContent,
-          id: Date.now(),
-          isOpen: false
-        })
-        this.newTitle = ''
-        this.newContent = ''
-      }
-    }
-  }
-}
+const categories = ref(['Мотивація', 'Продуктивність', 'Здоров\'я']);
+const selectedCategory = ref(categories.value[0]);
+const advice = ref('');
+const showAlert = ref(false);
+
+const advices = {
+  'Мотивація': [
+    'Кожен день – це нова можливість.',
+    'Вір у себе і йди до мети!',
+    'Невдачі – це лише частина шляху до успіху.'
+  ],
+  'Продуктивність': [
+    'Плануй свій день заздалегідь.',
+    'Використовуй техніку Pomodoro.',
+    'Зосередься на головних задачах.'
+  ],
+  'Здоров\'я': [
+    'Пий більше води!',
+    'Роби зарядку щоранку.',
+    'Дотримуйся режиму сну.'
+  ]
+};
+
+const generateAdvice = () => {
+  const adviceList = advices[selectedCategory.value];
+  advice.value = adviceList[Math.floor(Math.random() * adviceList.length)];
+  showAlert.value = true;
+
+  setTimeout(() => {
+    showAlert.value = false;
+  }, 4000);
+};
+
+watch(selectedCategory, generateAdvice);
 </script>
-
