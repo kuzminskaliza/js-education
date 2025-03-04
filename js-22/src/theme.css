@@ -1,0 +1,137 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #155467, #1e6f83);
+    padding: 20px;
+    position: relative;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 26px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-control label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-control input,
+.form-control select {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control input:focus,
+.form-control select:focus {
+    border-color: #4ad598;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 213, 152, 0.5);
+}
+
+.form-checkbox {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-checkbox .label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-checkbox .checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.form-checkbox .checkbox label {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.btn {
+    background: linear-gradient(135deg, #4ad598, #2b8c6b);
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #3dbb85, #24715b);
+    transform: translateY(-2px);
+}
+
+.alert {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffebcc;
+    color: #8a4b00;
+    padding: 15px;
+    border-left: 6px solid #ff9900;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.alert-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.alert .btn {
+    background: #ff9900;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert .btn:hover {
+    background: #cc7a00;
+}
